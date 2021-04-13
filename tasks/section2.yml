@@ -55,7 +55,7 @@
   when:
     - amazonlinux2cis_level1 is defined and amazonlinux2cis_level1
     - amazonlinux2cis_time_synchronization is defined
-    - amazonlinux2cis_time_synchronization == "ntp" and chronyd_service_status.stdout == "loaded"
+    - amazonlinux2cis_time_synchronization == "ntp" and chronyd_service_status.stat.exists
   tags:
     - level1
     - patch
