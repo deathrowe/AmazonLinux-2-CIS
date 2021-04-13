@@ -11,7 +11,7 @@
     msg: "FAIL | This role can only be executed on Amazon Linux 2 operating systems. {{ ansible_distribution }} {{ ansible_distribution_version }} is not supported."
   when:
     - ansible_distribution|lower == 'amazon'
-    - ansible_distribution_version is version_compare('2017.12', '!=')
+    - ansible_distribution_version is version_compare('2', '!=')
   tags:
     - always
 
