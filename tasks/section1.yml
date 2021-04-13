@@ -378,7 +378,7 @@
     - level1
     - rule_1
     - rule_1.1
-    - rule_1.1.
+    - rule_1.1.5
     - low
 
 - name: 1.1.6 Ensure separate partition exists for /var (Scored)
@@ -646,7 +646,7 @@
   when:
     - amazonlinux2cis_level1 is defined and amazonlinux2cis_level1
     - amazonlinux2cis_allow_autofs == false
-    - autofs_service_status.stdout == "loaded"
+    - autofs_service_status.stat.exists
   tags:
     - level1
     - patch
