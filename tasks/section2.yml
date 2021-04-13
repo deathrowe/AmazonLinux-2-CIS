@@ -273,7 +273,7 @@
     enabled: no
   ignore_errors: yes
   when:
-    - amazonlinux2cis_level1 is defined and amazonlinux2cis_level1 
+    - amazonlinux2cis_level1 is defined and amazonlinux2cis_level1
     - not amazonlinux2cis_nfs_rpc_server and rpcbind_service_status.stdout == "loaded"
     - amazonlinux2cis_disable_service_checks is defined and amazonlinux2cis_disable_service_checks
   tags:
@@ -387,7 +387,7 @@
     - patch
     - rule_2.1.13
     - low
-    - amazonlinux2cis_disable_service_checks is defined and amazonlinux2cis_disable_service_checks
+    - disable_service_checks
 
 - name: "SCORED | 2.1.14 | PATCH | Ensure SNMP Server is not enabled"
   systemd:
